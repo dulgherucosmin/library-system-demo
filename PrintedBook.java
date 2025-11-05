@@ -2,6 +2,10 @@
 
 public class PrintedBook extends Book {
     
+    /*
+     * TODO: write about class
+     */
+
     private int pageLength;
     private String cover; // 'PaperBack' or 'HardBack'
 

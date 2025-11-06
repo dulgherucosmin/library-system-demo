@@ -41,7 +41,7 @@ public abstract class Book {
         }
     }
 
-    // display class info
+    // override toString method to display class info 
     @Override
     public String toString() {
         return "Title: " + this.title + "\nAuthor: " + this.author + "\nBorrowed: " + this.borrowed;

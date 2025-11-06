@@ -1,11 +1,12 @@
 public class Audiobook extends Book {
     
     /*
-     * TODO: class description
+     * Audiobook class for handling 'audiobook' type data in the library system.
+     * Inherits from the 'Book' abstract class and adds the ability to handle narrator, audio length (in hours), and size (in MB).
      */
 
     private String narrator;
-    private double audioLength;
+    private double audioLength; // in hours
     private double size; // in MB
 
     public Audiobook(
@@ -35,7 +36,7 @@ public class Audiobook extends Book {
         }
     }
 
-    // display class info
+    // override toString method to display class info 
     @Override
     public String toString() {
         return "Title: " + super.getTitle() + "\nAuthor: " + super.getAuthor() + "\nNarrator: " + this.narrator + "\nAudio Length: " + this.audioLength + " hours" + "\nSize: " + this.size + " MB";

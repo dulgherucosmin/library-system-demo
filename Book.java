@@ -1,5 +1,3 @@
-// Dulgheru Cosmin Alexandru 3161052
-
 public abstract class Book {
 
     /*

@@ -1,7 +1,8 @@
 public class PrintedBook extends Book {
     
     /*
-     * TODO: write about class
+     * PrintedBook class for handling 'paperback / hardback' type data in the library system.
+     * Inherits from the 'Book' abstract class and adds the ability to handle type of cover (Paperback/Hardback) and page length.
      */
 
     private int pageLength;
@@ -31,7 +32,8 @@ public class PrintedBook extends Book {
         }
 
     }
-    // display class info
+
+    // override toString method to display class info 
     @Override
     public String toString() {
         return "Title: " + super.getTitle() + "\nAuthor: " + super.getAuthor() + "\nPage Length: " + this.pageLength + "\nCover: " + this.cover + "\nBorrowed: " + super.getBorrowed();

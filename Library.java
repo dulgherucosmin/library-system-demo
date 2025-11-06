@@ -1,0 +1,119 @@
+import java.util.ArrayList;
+
+public class Library implements Catalogue {
+    
+    private String name;
+    private String location;
+    private ArrayList<Book> catalogue = new ArrayList<>();
+
+    public Library(
+        String name,
+        String location
+    ) {
+        this.name = name;
+        this.location = location;
+    }
+
+    @Override
+    public String toString() {
+        return "Library Information\nName: " + this.name + "\nLocation: " + this.location;
+    }
+
+    @Override
+    public void addBook(Book book) {
+        // add book to library
+        this.catalogue.add(book);
+    }
+
+    @Override
+    public ArrayList<Book> getAvailableBooks() {
+        // gets all books that are not currently borrowed
+        ArrayList<Book> availableBooks = new ArrayList<>();
+
+        // cycle through all books in the catalogue
+        for (Book b: this.catalogue) {
+            // check if book is borrowed
+            if (!b.getBorrowed()) {
+                // add to the arraylist
+                availableBooks.add(b);
+            }
+        }
+        // return array list of available books
+        return availableBooks;
+    }
+
+    @Override
+    public ArrayList<PrintedBook> getPrintedBooks() {
+        // return a list of just PrintedBooks
+        ArrayList<PrintedBook> printedBooks = new ArrayList<>();
+
+        // cycle through all books in the catalogue
+        for (Book b: this.catalogue) {
+            // check if book is a printed book
+            if (b instanceof PrintedBook) {
+                // add to the arraylist
+                printedBooks.add(b);
+            }
+        }
+        // return array list of printed books
+        return printedBooks;
+    }
+
+    @Override
+    public ArrayList<EBook> getEBooks() {
+        // return a list of just EBooks
+        ArrayList<EBook> eBooks = new ArrayList<>();
+
+        // cycle through all books in the catalogue
+        for (Book b: this.catalogue) {
+            // check if book is an ebook
+            if (b instanceof EBook) {
+                // add to the arraylist
+                eBooks.add(b);
+            }
+        }
+        // return array list of ebooks
+        return eBooks;
+    }
+
+    @Override
+    public ArrayList<AudioBook> getAudioBooks() {
+        // return a list of just AudioBooks
+        ArrayList<AudioBook> audioBooks = new ArrayList<>();
+
+        // cycle through all books in the catalogue
+        for (Book b: this.catalogue) {
+            // check if book is an audiobook
+            if (b instanceof AudioBook) {
+                // add to the arraylist
+                audioBooks.add(b);
+            }
+        }
+        // return array list of ebooks
+        return audioBooks;
+    }
+
+    @Override
+    public void returnBook(Book book) {
+        // check if book is borrowed
+        if (book.getBorrowed()) {
+            // return book
+            book.returnBook();
+        } else {
+            // book is not currently borrowed, throw error
+            throw new IllegalStateException("Book is not borrowed and is still available.");
+        }
+    }
+
+    /*
+     * GETTERS
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    public String getLocation() {
+        return this.location;
+    }
+
+}

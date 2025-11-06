@@ -35,6 +35,12 @@ public class EBook extends Book {
         }
     }
 
+    // display class info
+    @Override
+    public String toString() {
+        return "Title: " + super.getTitle() + "\nAuthor: " + super.getAuthor() + "\nFormat: " + this.format + "\nPage Length: " + this.pageLength + "\nSize: " + this.size + " MB";
+    }
+
     /*
      * SETTERS
      */

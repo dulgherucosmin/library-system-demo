@@ -1,7 +1,8 @@
 public class EBook extends Book {
 
     /*
-     * TODO: comment about Ebook class
+     * EBook class for handling 'ebook' type data in the library system.
+     * Inherits from the 'Book' abstract class and adds the ability to handle pageLength, size (in MB), and different formats.
      */
 
     private String format;
@@ -35,7 +36,7 @@ public class EBook extends Book {
         }
     }
 
-    // display class info
+    // override toString method to display class info 
     @Override
     public String toString() {
         return "Title: " + super.getTitle() + "\nAuthor: " + super.getAuthor() + "\nFormat: " + this.format + "\nPage Length: " + this.pageLength + "\nSize: " + this.size + " MB";
@@ -59,7 +60,7 @@ public class EBook extends Book {
     }
 
     public void setSize(double newSize) {
-        // validsate whether size is non negative
+        // validate whether size is non negative
         if (newSize > 0) {
             this.size = newSize;
         } else {

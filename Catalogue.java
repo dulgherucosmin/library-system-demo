@@ -5,7 +5,7 @@ interface Catalogue {
     public void addBook(Book book);
     //add book to library
 
-    public ArrayList <Book> getAvailableBooks();
+    public ArrayList<Book> getAvailableBooks();
     // gets all books that are not currently borrowed
 
     public ArrayList<PrintedBook> getPrintedBooks();
@@ -29,5 +29,5 @@ interface Catalogue {
 
     public void returnBook(Book book);
     //update the book to not borrowed
-    
+
 }

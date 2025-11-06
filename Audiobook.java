@@ -1,4 +1,4 @@
-public class Audiobook extends Book {
+public class AudioBook extends Book {
     
     /*
      * Audiobook class for handling 'audiobook' type data in the library system.
@@ -9,7 +9,7 @@ public class Audiobook extends Book {
     private double audioLength; // in hours
     private double size; // in MB
 
-    public Audiobook(
+    public AudioBook(
         String title,
         String author,
         String narrator,

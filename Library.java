@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 
 public class Library implements Catalogue {
+
+    /*
+     * TODO: class info
+     */
     
     private String name;
     private String location;

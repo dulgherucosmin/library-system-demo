@@ -2,6 +2,10 @@ import java.util.ArrayList;
 
 interface Catalogue {
 
+    /*
+     * Interface to act as a baseline for the 'Library' class.
+     */
+
     public void addBook(Book book);
     //add book to library
 

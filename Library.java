@@ -94,6 +94,135 @@ public class Library implements Catalogue {
     }
 
     @Override
+    public Book borrow(
+        String title,
+        String author
+    ) {
+        //checks if a book with the title and author is available
+        //return null if not found
+        //let the user know if not found or just no copies available.
+
+        // cycle through all books in the catalogue
+        for (Book b: this.catalogue) {
+            String bookTitle = b.getTitle();
+            String bookAuthor = b.getAuthor();
+            boolean isAvailable = b.getBorrowed();
+
+            // check if title and author match
+            if (bookTitle.equalsIgnoreCase(title) && bookAuthor.equalsIgnoreCase(author)) {
+                // check if book is available (copies are there)
+                if (isAvailable) {
+                    // set status of book to borrowed
+                    b.borrow();
+                    // return book
+                    return b;
+                // book is not available (no copies)
+                } else if (!isAvailable) {
+                    System.out.println("No copies are available to borrow at this time.");
+                    return null; // return null
+                }
+            }
+        }
+        // book not found
+        System.out.println("No book found with that title and author.");
+        return null;
+    }
+
+    @Override
+    public Book borrow(
+        String title,
+        String author,
+        String type
+    ) {
+
+        // switch statement for types of 
+        switch (type.toLowerCase()) {
+            
+            case "printedbook":
+                // cycle through all printed books
+                for (PrintedBook b: this.getPrintedBooks()) {
+                    String bookTitle = b.getTitle();
+                    String bookAuthor = b.getAuthor();
+                    boolean isAvailable = b.getBorrowed();
+                    
+                    // check if title and author match
+                    if (bookTitle.equalsIgnoreCase(title) && bookAuthor.equalsIgnoreCase(author)) {
+                        // check if book is available (copies are there)
+                        if (isAvailable) {
+                            // set status of book to borrowed
+                            b.borrow();
+                            // return book
+                            return b;
+                        // book is not available (no copies)
+                        } else if (!isAvailable) {
+                            System.out.println("No copies are available to borrow at this time.");
+                            return null;
+                        }
+                    }
+                }
+                // book not found
+                System.out.println("No book found with that title and author, in that type of books.");
+                return null;
+            
+            case "ebook":
+                // cycle through all printed books
+                for (EBook b: this.getEBooks()) {
+                    String bookTitle = b.getTitle();
+                    String bookAuthor = b.getAuthor();
+                    boolean isAvailable = b.getBorrowed();
+                    
+                    // check if title and author match
+                    if (bookTitle.equalsIgnoreCase(title) && bookAuthor.equalsIgnoreCase(author)) {
+                        // check if book is available (copies are there)
+                        if (isAvailable) {
+                            // set status of book to borrowed
+                            b.borrow();
+                            // return book
+                            return b;
+                        // book is not available (no copies)
+                        } else if (!isAvailable) {
+                            System.out.println("No copies are available to borrow at this time.");
+                            return null;
+                        }
+                    }
+                }
+                // book not found
+                System.out.println("No book found with that title and author, in that type of books.");
+                return null;
+
+            case "audiobook":
+                // cycle through all printed books
+                for (AudioBook b: this.getAudioBooks()) {
+                    String bookTitle = b.getTitle();
+                    String bookAuthor = b.getAuthor();
+                    boolean isAvailable = b.getBorrowed();
+                    
+                    // check if title and author match
+                    if (bookTitle.equalsIgnoreCase(title) && bookAuthor.equalsIgnoreCase(author)) {
+                        // check if book is available (copies are there)
+                        if (isAvailable) {
+                            // set status of book to borrowed
+                            b.borrow();
+                            // return book
+                            return b;
+                        // book is not available (no copies)
+                        } else if (!isAvailable) {
+                            System.out.println("No copies are available to borrow at this time.");
+                            return null;
+                        }
+                    }
+                }
+                // book not found
+                System.out.println("No book found with that title and author, in that type of books.");
+                return null;
+
+            default:
+                System.out.println("Invalid parameters.");
+                return null;
+        }
+    }
+
+    @Override
     public void returnBook(Book book) {
         // check if book is borrowed
         if (book.getBorrowed()) {

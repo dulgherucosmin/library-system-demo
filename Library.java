@@ -56,7 +56,7 @@ public class Library implements Catalogue {
             // check if book is a printed book
             if (b instanceof PrintedBook) {
                 // add to the arraylist
-                printedBooks.add(b);
+                printedBooks.add((PrintedBook) b);
             }
         }
         // return array list of printed books
@@ -73,7 +73,7 @@ public class Library implements Catalogue {
             // check if book is an ebook
             if (b instanceof EBook) {
                 // add to the arraylist
-                eBooks.add(b);
+                eBooks.add((EBook) b);
             }
         }
         // return array list of ebooks
@@ -90,7 +90,7 @@ public class Library implements Catalogue {
             // check if book is an audiobook
             if (b instanceof AudioBook) {
                 // add to the arraylist
-                audioBooks.add(b);
+                audioBooks.add((AudioBook) b);
             }
         }
         // return array list of ebooks

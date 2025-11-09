@@ -14,8 +14,23 @@ public abstract class Book {
         String title,
         String author
     ) {
-        this.title = title;
-        this.author = author;
+
+        // ensure title is not an empty string
+        if (!title.isEmpty()) {
+            this.title = title;
+        } else {
+            // title is an empty string, throw error
+            throw new RuntimeException("Title cannot be an empty string.");
+        }
+
+        // ensure author is not an empty string
+        if (!author.isEmpty()) {
+            this.author = author;
+        } else {
+            // author is an empty string, throw error
+            throw new RuntimeException("Author cannot be an empty string.");
+        }
+        
         this.borrowed = false;
     }
 
@@ -26,7 +41,7 @@ public abstract class Book {
             this.borrowed = true;
         } else {
             // if borrowed, throw error message 
-            throw new IllegalStateException("Book is already borrowed.");
+            throw new RuntimeException("Book is already borrowed.");
         }
     }
 
@@ -37,7 +52,7 @@ public abstract class Book {
             this.borrowed = false;
         } else {
             // if not borrowed, throw error message
-            throw new IllegalStateException("Book has not been borrowed.");
+            throw new RuntimeException("Book has not been borrowed.");
         }
     }
 

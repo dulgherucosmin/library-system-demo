@@ -24,7 +24,7 @@ public class AudioBook extends Book {
             this.audioLength = audioLength;
         } else {
             // audio length is non negative or zero, throw error
-            throw new IllegalStateException("Audio length must be a number above 0.");
+            throw new RuntimeException("Audio length must be a number above 0.");
         }
 
         // validsate whether size is non negative
@@ -32,7 +32,7 @@ public class AudioBook extends Book {
             this.size = size;
         } else {
             // size is non negative or zero, throw error
-            throw new IllegalStateException("Size must be a number 0 MB.");
+            throw new RuntimeException("Size must be a number 0 MB.");
         }
     }
 
@@ -55,7 +55,7 @@ public class AudioBook extends Book {
             this.audioLength = newAudioLength;
         } else {
             // audio length is non negative or zero, throw error
-            throw new IllegalStateException("Audio length must be a number above 0.");
+            throw new RuntimeException("Audio length must be a number above 0.");
         }
     }
 
@@ -65,7 +65,7 @@ public class AudioBook extends Book {
             this.size = newSize;
         } else {
             // size is non negative or zero, throw error
-            throw new IllegalStateException("Size must be a number 0 MB.");
+            throw new RuntimeException("Size must be a number 0 MB.");
         }
     }
 

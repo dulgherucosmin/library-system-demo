@@ -234,7 +234,7 @@ public class Library implements Catalogue {
             book.returnBook();
         } else {
             // book is not currently borrowed, throw error
-            throw new IllegalStateException("Book is not borrowed and is still available.");
+            throw new RuntimeException("Book is not borrowed and is still available.");
         }
     }
 

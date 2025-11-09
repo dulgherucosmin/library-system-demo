@@ -20,7 +20,7 @@ public class PrintedBook extends Book {
             this.cover = cover;
         } else {
             // invalid cover, throw error
-            throw new IllegalStateException("Cover must be either Paperback or Hardback.");
+            throw new RuntimeException("Cover must be either Paperback or Hardback.");
         }
         
         // validate whether page length is non negative
@@ -28,7 +28,7 @@ public class PrintedBook extends Book {
             this.pageLength = pageLength;
         } else {
             // page length is non negative or zero, throw error
-            throw new IllegalStateException("Page length must be an integer above 0.");
+            throw new RuntimeException("Page length must be an integer above 0.");
         }
 
     }
@@ -50,7 +50,7 @@ public class PrintedBook extends Book {
             this.cover = newCover;
         } else {
             // invalid cover, throw error
-            throw new IllegalStateException("Cover must be either Paperback or Hardback.");
+            throw new RuntimeException("Cover must be either Paperback or Hardback.");
         }
     }
 
@@ -62,7 +62,7 @@ public class PrintedBook extends Book {
             this.pageLength = newPageLength;
         } else {
             // page length is non negative or zero, throw error
-            throw new IllegalStateException("Page length must be an integer above 0.");
+            throw new RuntimeException("Page length must be an integer above 0.");
         }
     }
 

@@ -110,18 +110,18 @@ public class Library implements Catalogue {
         for (Book b: this.catalogue) {
             String bookTitle = b.getTitle();
             String bookAuthor = b.getAuthor();
-            boolean isAvailable = b.getBorrowed();
+            boolean isBorrowed = b.getBorrowed(); // 
 
             // check if title and author match
             if (bookTitle.equalsIgnoreCase(title) && bookAuthor.equalsIgnoreCase(author)) {
                 // check if book is available (copies are there)
-                if (isAvailable) {
+                if (!isBorrowed) {
                     // set status of book to borrowed
                     b.borrow();
                     // return book
                     return b;
                 // book is not available (no copies)
-                } else if (!isAvailable) {
+                } else if (isBorrowed) {
                     System.out.println("No copies are available to borrow at this time.");
                     return null; // return null
                 }
@@ -147,18 +147,18 @@ public class Library implements Catalogue {
                 for (PrintedBook b: this.getPrintedBooks()) {
                     String bookTitle = b.getTitle();
                     String bookAuthor = b.getAuthor();
-                    boolean isAvailable = b.getBorrowed();
+                    boolean isBorrowed = b.getBorrowed();
                     
                     // check if title and author match
                     if (bookTitle.equalsIgnoreCase(title) && bookAuthor.equalsIgnoreCase(author)) {
                         // check if book is available (copies are there)
-                        if (isAvailable) {
+                        if (!isBorrowed) {
                             // set status of book to borrowed
                             b.borrow();
                             // return book
                             return b;
                         // book is not available (no copies)
-                        } else if (!isAvailable) {
+                        } else if (isBorrowed) {
                             System.out.println("No copies are available to borrow at this time.");
                             return null;
                         }

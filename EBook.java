@@ -1,9 +1,8 @@
+/**
+ * EBook class for handling 'ebook' type data in the library system.
+ * Inherits from the 'Book' abstract class and adds the ability to handle pageLength, size (in MB), and different formats.
+ */
 public class EBook extends Book {
-
-    /*
-     * EBook class for handling 'ebook' type data in the library system.
-     * Inherits from the 'Book' abstract class and adds the ability to handle pageLength, size (in MB), and different formats.
-     */
 
     private String format;
     private int pageLength;

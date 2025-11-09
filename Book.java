@@ -1,10 +1,9 @@
+/**
+ * Abstract book class acting as a baseline for other types of books to
+ * inherit from, such as Ebooks and PrintedBooks. Book class allows for basic information
+ * such as title, author, and status (whether or not a book is borrowed) and displays information.
+ */
 public abstract class Book {
-
-    /*
-     * Abstract book class acting as a baseline for other types of books to
-     * inherit from, such as Ebooks and PrintedBooks. Book class allows for basic information
-     * such as title, author, and status (whether or not a book is borrowed) and displays information.
-     */
 
     private String title;
     private String author;

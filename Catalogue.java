@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+/**
+ * Catalogue interface for the Library class.
+ * Template given in assignment brief.
+ */
 interface Catalogue {
 
     /*

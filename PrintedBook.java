@@ -16,7 +16,7 @@ public class PrintedBook extends Book {
     ) {
         super(title, author);
         // validate whether cover is 'paperback' or 'hardback'
-        if (this.cover.equalsIgnoreCase("paperback") || this.cover.equalsIgnoreCase("hardback")){
+        if (cover.equalsIgnoreCase("paperback") || cover.equalsIgnoreCase("hardback")){
             this.cover = cover;
         } else {
             // invalid cover, throw error

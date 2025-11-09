@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 
+/**
+ * Library class implementing the Catalogue interface.
+ * Represents a library with a collection of books of different types (printed, eboook, audio).
+ * Provides functionality to manage books including adding, borrowing, and returning books.
+ * Books can be filtered by type.
+ */
 public class Library implements Catalogue {
-
-    /*
-     * TODO: class info
-     */
     
     private String name;
     private String location;

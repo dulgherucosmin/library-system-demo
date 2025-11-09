@@ -8,7 +8,7 @@ public class Library implements Catalogue {
     
     private String name;
     private String location;
-    private ArrayList<Book> catalogue = new ArrayList<>();
+    private ArrayList<Book> catalogue;
 
     public Library(
         String name,
@@ -16,6 +16,7 @@ public class Library implements Catalogue {
     ) {
         this.name = name;
         this.location = location;
+        this.catalogue = new ArrayList<>();
     }
 
     @Override
@@ -228,8 +229,10 @@ public class Library implements Catalogue {
 
     @Override
     public void returnBook(Book book) {
+        boolean isBorrowed = book.getBorrowed();
+
         // check if book is borrowed
-        if (book.getBorrowed()) {
+        if (isBorrowed) {
             // return book
             book.returnBook();
         } else {
@@ -247,6 +250,10 @@ public class Library implements Catalogue {
 
     public String getLocation() {
         return this.location;
+    }
+
+    public ArrayList<Book> getCatalogue() {
+        return this.catalogue;
     }
 
 }

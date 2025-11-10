@@ -168,7 +168,6 @@ public class Test {
                     System.out.println("Enter the author of the book you would like to return.");
                     author = sc.nextLine();
 
-                    System.out.println("gate 1");
                     ArrayList<Book> allBooks = library.getCatalogue();
 
                     // loop through all books
@@ -179,7 +178,6 @@ public class Test {
                         // check if user inputs and book match
                         if (bookTitle.equalsIgnoreCase(title) && bookAuthor.equalsIgnoreCase(author)) {
                             // set status of the book to available / return book
-                            System.out.println("gate 2");
                             library.returnBook(b);
                             System.out.println("Returned book");
                         }

@@ -1,5 +1,5 @@
 <!-- ...existing code... -->
-# Simple Java Library System
+# Library System Demo
 
 A simple library system developed to showcase the basics of Object Oriented concepts such as inheritance, polymorphism, and interfaces in the Java programming language.
 

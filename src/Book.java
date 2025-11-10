@@ -1,3 +1,5 @@
+package src;
+
 /**
  * Abstract book class acting as a baseline for other types of books to
  * inherit from, such as Ebooks and PrintedBooks. Book class allows for basic information

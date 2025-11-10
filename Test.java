@@ -1,6 +1,12 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+ * Test class used to showcase the features of the library system.
+ * Provides the user a menu to access the features of the library including borrowing books, returning books, viewing available books
+ * and filtering book types.
+*/
+
 public class Test {
     
     public static void main(String[] args) {

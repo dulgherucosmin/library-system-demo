@@ -1,9 +1,9 @@
+/*
+ * PrintedBook class for handling 'paperback / hardback' type data in the library system.
+ * Inherits from the 'Book' abstract class and adds the ability to handle type of cover (Paperback/Hardback) and page length.
+ */
+
 public class PrintedBook extends Book {
-    
-    /*
-     * PrintedBook class for handling 'paperback / hardback' type data in the library system.
-     * Inherits from the 'Book' abstract class and adds the ability to handle type of cover (Paperback/Hardback) and page length.
-     */
 
     private int pageLength;
     private String cover; // 'PaperBack' or 'HardBack'

@@ -44,7 +44,6 @@ public abstract class Book {
         }
     }
 
-    // TODO: check out 'return' not working
     public void returnBook() {
         // check if book is borrowed
         if (this.borrowed) {

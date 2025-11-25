@@ -1,7 +1,7 @@
 <!-- ...existing code... -->
 # Library System Demo
 
-A simple library system developed to showcase the basics of Object Oriented concepts such as inheritance, polymorphism, and interfaces in the Java programming language.
+A simple library system developed to showcase the basics of Object Oriented concepts such as inheritance, polymorphism, and interfaces in the Java programming language. Developed as a part of an assignment for BSCH-OOP Object Oriented Programming. Achieved a 99% grade.
 
 ## Features
 - Demonstrates inheritance and polymorphism with a base `Book` type and concrete subclasses:
